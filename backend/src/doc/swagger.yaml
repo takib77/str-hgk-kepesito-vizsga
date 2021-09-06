@@ -152,7 +152,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/chool'
+                  $ref: '#/components/schemas/School'
         '500':
           description: Internal server error
           content:
@@ -160,7 +160,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
     post:
-      description: Creates a new chool
+      description: Creates a new School
       requestBody:
         required: true
         content:
@@ -311,15 +311,6 @@ components:
           type: number
         classrooms:
           type: array
-          items:
-            $ref: '#/components/schemas/Classroom'
-    Classroom:
-      type: object
-      required:
-        - name
-      properties:
-        name:
-          type: string
     Error:
       type: object
       required:
