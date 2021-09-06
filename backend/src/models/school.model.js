@@ -1,7 +1,3 @@
-/**
- * Exercise: make School mongoose model
- */
-
 const mongoose = require('mongoose');
 
 const SchoolSchema = mongoose.Schema({
