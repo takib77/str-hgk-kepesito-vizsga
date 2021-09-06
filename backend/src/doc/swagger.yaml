@@ -310,10 +310,16 @@ components:
         zipcode:
           type: number
         classrooms:
-          type: object
-          properties: 
-            name: 
-              type: string
+          type: array
+          items:
+            $ref: '#/components/schemas/Classroom'
+    Classroom:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
     Error:
       type: object
       required:
